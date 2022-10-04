@@ -3,12 +3,13 @@ import React, { useState, useEffect } from "react";
 import { StyleSheet, Text, View, FlatList, Pressable } from "react-native";
 import * as Contacts from "expo-contacts";
 
-export default function App() {
+export default function Clima() {
   
   return (
     <View style={styles.container}>
-        <Pressable />
-      <StatusBar style="auto" />
+
+        <Text>hOLAAAAAAA</Text>
+      <StatusBar style="auto" backgroundColor="##2a7afa" />
     </View>
   );
 }
@@ -26,4 +27,7 @@ const styles = StyleSheet.create({
     height: 'auto',
     margin: 10,
   },
+  boton: {
+    backgroundColor: "#000"
+  }
 });
