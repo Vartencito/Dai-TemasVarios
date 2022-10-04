@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { StyleSheet, Text, View, FlatList } from "react-native";
 import * as Contacts from "expo-contacts";
 
-export default function App() {
+export default function Contactos() {
   const [contacts, setContacts] = useState([]);
 
   const getContacts = async () => {

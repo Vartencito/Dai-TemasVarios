@@ -1,15 +1,27 @@
-import { StatusBar } from "expo-status-bar";
-import React, { useState, useEffect } from "react";
-import { StyleSheet, Text, View, FlatList, Pressable } from "react-native";
-import * as Contacts from "expo-contacts";
+import React from "react";
+import { StyleSheet } from "react-native";
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Home from './src/Screens/Home'
+import Contactos from "./src/Screens/Contactos";
 
 export default function App() {
-  
+
+  const Stack = createNativeStackNavigator();
+
   return (
-    <View style={styles.container}>
-        <Pressable />
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={Home} 
+        options={{
+          headerShown: false,
+        }}/>
+        <Stack.Screen name="Contactos" component={Contactos}
+         options={{
+         headerTitle: "Contactos",
+        }}/>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
@@ -26,4 +38,10 @@ const styles = StyleSheet.create({
     height: 'auto',
     margin: 10,
   },
+  boton: {
+    backgroundColor: "#2c7ef2",
+    borderRadius: 20,
+    height: 20,
+    width: 40
+  }
 });

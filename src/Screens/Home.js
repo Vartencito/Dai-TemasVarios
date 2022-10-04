@@ -2,13 +2,15 @@ import { StatusBar } from "expo-status-bar";
 import React, { useState, useEffect } from "react";
 import { StyleSheet, Text, View, FlatList, Pressable } from "react-native";
 
-export default function Clima() {
+export default function Home() {
   
   return (
     <View style={styles.container}>
-        <Text>hOLAAAAAAA</Text>
-      <StatusBar style="auto"/>
-    </View>
+    <Pressable 
+    style={styles.boton}
+    onPress={()=>navigation.navigate('Clima')}/>
+  <StatusBar style="auto" />
+</View>
   );
 }
 
