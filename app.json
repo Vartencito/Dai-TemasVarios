@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "temas-varios",
+    "slug": "temas-varios",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "temas-varios"
+}
